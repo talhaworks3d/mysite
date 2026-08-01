@@ -54,48 +54,7 @@ export default function ServicesPage() {
           ))}
         </div>
 
-        {/* CAD Pipeline Highlight */}
-        <div className="border border-border bg-background p-8 md:p-12 space-y-6">
-          <div className="flex items-center space-x-3">
-            <Cpu className="w-6 h-6 text-accent" />
-            <h2 className="font-mono text-xl font-bold text-foreground">
-              The CAD-to-Render Pipeline Process
-            </h2>
-          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 font-mono text-xs">
-            <div className="border border-border bg-card p-5 space-y-2">
-              <span className="text-accent font-bold">STAGE 01</span>
-              <h3 className="font-bold text-foreground text-sm">CAD Ingestion & Mesh Retopology</h3>
-              <p className="text-muted-foreground font-sans text-xs leading-relaxed">
-                Import raw STEP/IGES assemblies, fix flipped normals, and generate clean quad meshes preserving hard surface bevels.
-              </p>
-            </div>
-
-            <div className="border border-border bg-card p-5 space-y-2">
-              <span className="text-accent font-bold">STAGE 02</span>
-              <h3 className="font-bold text-foreground text-sm">PBR Shading & Lighting</h3>
-              <p className="text-muted-foreground font-sans text-xs leading-relaxed">
-                Apply physically accurate surface shaders (anodized metals, carbon weave, glass) and configure realistic HDRI studio lighting.
-              </p>
-            </div>
-
-            <div className="border border-border bg-card p-5 space-y-2">
-              <span className="text-accent font-bold">STAGE 03</span>
-              <h3 className="font-bold text-foreground text-sm">Export & WebGL Integration</h3>
-              <p className="text-muted-foreground font-sans text-xs leading-relaxed">
-                Render 8K marketing stills or bake textures for realtime 60fps PlayCanvas web configurator deployment.
-              </p>
-            </div>
-          </div>
-
-          <div className="pt-4 text-center md:text-left">
-            <Button href="/contact" variant="primary" size="md">
-              Inquire About CAD Processing
-              <ArrowRight className="w-4 h-4 ml-2" />
-            </Button>
-          </div>
-        </div>
       </FadeIn>
     </Section>
   );

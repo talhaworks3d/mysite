@@ -150,20 +150,37 @@ export const SERVICES: ServiceItem[] = [
   {
     id: "product-renders",
     title: "Product Renders & Hero Stills",
-    description: "Transform complex CAD files into magazine-ready photorealistic images for launch campaigns, websites, and technical datasheets.",
-    deliverables: ["4K/8K Studio Stills", "Exploded CAD Diagrams", "Material Variant Renders", "Transparent PNG Cutouts"],
+    description: "Transform complex CAD files (STEP, IGES, SolidWorks) into magazine-ready photorealistic stills for launch campaigns, websites, and technical datasheets.",
+    deliverables: [
+      "4K/8K Studio Stills",
+      "CAD Mesh Retopology & Cleanup",
+      "Exploded CAD Diagrams",
+      "PBR Material & Lighting Setup",
+      "Material Variant Renders",
+      "Transparent PNG Cutouts",
+    ],
+  },
+  {
+    id: "product-animation",
+    title: "Product Animation",
+    description: "Dynamic 3D motion graphics and kinematic animations highlighting internal mechanical assemblies, exploded views, and key product features.",
+    deliverables: [
+      "Exploded Assembly Animations",
+      "360° Turntable Video Reels",
+      "Camera Motion Fly-throughs",
+      "Kinematic Mechanism Motion",
+    ],
   },
   {
     id: "web-configurators",
     title: "Interactive Web 3D Configurators",
     description: "Embed real-time 3D viewers or turntable rotators directly into your website. Allow customers to explore materials, colors, and options in real time.",
-    deliverables: ["PlayCanvas / Three.js Web Viewers", "360° Drag-to-Rotate Image Sequences", "Mobile-Optimized Assets", "Custom UI Integration"],
-  },
-  {
-    id: "cad-pipeline",
-    title: "CAD-to-Render Pipeline Setup",
-    description: "Establish a streamlined workflow to bridge the gap between engineering CAD data (STEP, SolidWorks, Rhino) and high-end visual marketing assets.",
-    deliverables: ["Mesh Optimization & Retopology", "PBR Material Library Setup", "Automated Batch Rendering", "Web-Ready Asset Optimization"],
+    deliverables: [
+      "PlayCanvas / Three.js Web Viewers",
+      "360° Drag-to-Rotate Image Sequences",
+      "Mobile-Optimized Realtime Assets",
+      "Custom UI & Trim Integration",
+    ],
   },
 ];
 
