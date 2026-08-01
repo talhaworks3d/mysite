@@ -69,35 +69,7 @@ export default function AboutPage() {
           </div>
         </div>
 
-        {/* Workflow Philosophy */}
-        <div className="border border-border bg-card p-8 md:p-12 space-y-6">
-          <h2 className="font-mono text-xl font-bold text-foreground">
-            The "Nothing" Design Language Principles
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 font-mono text-xs">
-            <div className="space-y-2">
-              <span className="text-accent font-bold">01 / RESTRAINT</span>
-              <h3 className="font-bold text-foreground">No Unnecessary Decoration</h3>
-              <p className="text-muted-foreground font-sans text-xs leading-relaxed">
-                No artificial glassmorphic blurs or gratuitous animations. Every line and pixel serves to highlight the hardware product.
-              </p>
-            </div>
-            <div className="space-y-2">
-              <span className="text-accent font-bold">02 / EXPOSED STRUCTURE</span>
-              <h3 className="font-bold text-foreground">Visible Grid & Measurements</h3>
-              <p className="text-muted-foreground font-sans text-xs leading-relaxed">
-                Thin 1px borders and exposed technical metadata mirror the precision of real-world mechanical blueprints.
-              </p>
-            </div>
-            <div className="space-y-2">
-              <span className="text-accent font-bold">03 / FUNCTIONAL MOTION</span>
-              <h3 className="font-bold text-foreground">Instant, Crisp Feedback</h3>
-              <p className="text-muted-foreground font-sans text-xs leading-relaxed">
-                Micro-transitions and subtle scroll reveals enhance navigation without slowing down performance.
-              </p>
-            </div>
-          </div>
-        </div>
+
       </FadeIn>
     </Section>
   );
