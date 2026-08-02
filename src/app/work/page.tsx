@@ -59,7 +59,7 @@ export default function WorkPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pt-4">
           {filteredProjects.map((project, idx) => (
             <FadeIn key={project.slug} delay={idx * 0.05}>
-              <WorkCard project={project} />
+              <WorkCard project={project} priority={idx === 0} />
             </FadeIn>
           ))}
         </div>

@@ -7,9 +7,10 @@ import { ArrowUpRight } from "lucide-react";
 
 interface WorkCardProps {
   project: Project;
+  priority?: boolean;
 }
 
-export function WorkCard({ project }: WorkCardProps) {
+export function WorkCard({ project, priority = false }: WorkCardProps) {
   return (
     <Link
       href={`/work/${project.slug}`}
@@ -20,6 +21,7 @@ export function WorkCard({ project }: WorkCardProps) {
           src={project.heroImage}
           alt={project.title}
           fill
+          priority={priority}
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           className="object-cover object-center transition-transform duration-500 group-hover:scale-[1.02]"
         />
