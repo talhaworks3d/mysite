@@ -2,10 +2,10 @@
 
 import * as React from "react";
 import { useTheme } from "next-themes";
-import { Sun, Moon, Monitor } from "lucide-react";
+import { Sun, Moon } from "lucide-react";
 
 export function ThemeToggle() {
-  const { theme, setTheme } = useTheme();
+  const { theme, resolvedTheme, setTheme } = useTheme();
   const [mounted, setMounted] = React.useState(false);
 
   React.useEffect(() => {
@@ -20,13 +20,18 @@ export function ThemeToggle() {
     );
   }
 
+  // resolvedTheme takes system dark/light preference into account when theme === "system"
+  const currentTheme = resolvedTheme || theme;
+  const isDark = currentTheme === "dark";
+
   return (
     <button
-      onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-      aria-label="Toggle Theme"
-      className="group relative flex items-center justify-center w-8 h-8 border border-border hover:border-foreground bg-background text-foreground transition-colors"
+      onClick={() => setTheme(isDark ? "light" : "dark")}
+      aria-label={`Switch to ${isDark ? "light" : "dark"} mode`}
+      title={`Switch to ${isDark ? "light" : "dark"} mode`}
+      className="group relative flex items-center justify-center w-8 h-8 border border-border hover:border-foreground bg-background text-foreground transition-colors cursor-pointer"
     >
-      {theme === "dark" ? (
+      {isDark ? (
         <Sun className="w-4 h-4 text-amber-400 transition-transform group-hover:rotate-45" />
       ) : (
         <Moon className="w-4 h-4 text-slate-800 dark:text-slate-200 transition-transform group-hover:-rotate-12" />
