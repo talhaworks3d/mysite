@@ -10,7 +10,7 @@ export function Footer() {
           <div className="space-y-3 md:col-span-2">
             <div className="flex items-center space-x-2 text-foreground font-semibold">
               <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-              <span>{SITE_METADATA.author.toUpperCase()} STUDIO</span>
+              <span>{SITE_METADATA.author.toUpperCase()} // STUDIO XYZ</span>
             </div>
             <p className="text-xs text-muted-foreground max-w-sm leading-relaxed font-sans">
               {SITE_METADATA.positioning}
@@ -24,7 +24,6 @@ export function Footer() {
             <h4 className="text-foreground uppercase tracking-widest text-[11px] font-bold">NAVIGATION</h4>
             <ul className="space-y-2 text-[11px]">
               <li><Link href="/work" className="hover:text-foreground transition-colors">WORK / CASE STUDIES</Link></li>
-              <li><Link href="/configurator" className="hover:text-foreground transition-colors">3D CONFIGURATOR</Link></li>
               <li><Link href="/services" className="hover:text-foreground transition-colors">SERVICES</Link></li>
               <li><Link href="/pricing" className="hover:text-foreground transition-colors">PRICING TIERS</Link></li>
               <li><Link href="/about" className="hover:text-foreground transition-colors">ABOUT & PROCESS</Link></li>

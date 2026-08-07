@@ -9,9 +9,7 @@ import { PROJECTS } from "@/lib/data";
 
 const CATEGORIES = [
   "ALL",
-  "Web 3D Configurator",
-  "Product Renders",
-  "ZBrush & Render",
+  ...Array.from(new Set(PROJECTS.map((p) => p.category))),
 ];
 
 export default function WorkPage() {

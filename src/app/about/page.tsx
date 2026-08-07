@@ -24,14 +24,17 @@ export default function AboutPage() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           <div className="lg:col-span-7 space-y-6">
             <h2 className="font-mono text-2xl font-bold text-foreground">
-              Bridging Engineering CAD and High-End Marketing
+              Bridging Industrial CAD, Cinema Robotics, and AI Simulation
             </h2>
             <div className="space-y-4 text-sm text-muted-foreground font-sans leading-relaxed">
               <p>
-                Hardware companies spend months or years perfecting raw CAD assemblies in SolidWorks, STEP, or Rhino. However, when it comes time for marketing launches or web pre-orders, traditional CAD screen grabs or clunky renders fail to capture the true tactile aesthetic of the product.
+                Hardware and robotics companies spend months engineering complex CAD assemblies in SolidWorks, STEP, or Rhino. However, presenting those assets on public web catalogs or deploying them into physics simulation environments often presents a bottleneck.
               </p>
               <p>
-                My focus is eliminating that friction. By combining hard-surface retopology in Blender & ZBrush with modern real-time WebGL engines (PlayCanvas), I craft lightweight 3D experiences that allow clients to view, rotate, and customize hardware products before manufacturing even begins.
+                My focus is engineering production-ready 3D solutions. Whether it's retopologizing 13 cinema camera robot rigs for unified web catalog display (like <span className="text-foreground font-medium">Camera Control</span> in LA) or building photorealistic, quad-to-tri digital twins with accurate hinge kinematics for AI robot training (like <span className="text-foreground font-medium">Simbridge</span> in Isaac Sim and MuJoCo), I bridge raw CAD geometry with high-performance real-time assets.
+              </p>
+              <p>
+                Every asset is delivered with clean topology, optimized PBR texture bakes, and low polygon overhead to ensure maximum visual fidelity without sacrificing frame rates or simulation speed.
               </p>
             </div>
 
@@ -51,19 +54,19 @@ export default function AboutPage() {
             <div className="space-y-4 font-mono text-xs text-muted-foreground">
               <div>
                 <span className="text-[10px] text-muted-foreground uppercase block">PRIMARY TOOLSET</span>
-                <span className="text-foreground font-medium">Blender / ZBrush / Substance Painter</span>
+                <span className="text-foreground font-medium">Blender / Substance Painter / ZBrush</span>
               </div>
               <div>
-                <span className="text-[10px] text-muted-foreground uppercase block">WEB 3D ENGINES</span>
+                <span className="text-[10px] text-muted-foreground uppercase block">SIMULATION & KINEMATICS</span>
+                <span className="text-foreground font-medium">Isaac Sim / MuJoCo / USD / URDF</span>
+              </div>
+              <div>
+                <span className="text-[10px] text-muted-foreground uppercase block">WEB 3D & REALTIME</span>
                 <span className="text-foreground font-medium">PlayCanvas WebGL / Three.js / GLTF</span>
               </div>
               <div>
                 <span className="text-[10px] text-muted-foreground uppercase block">CAD COMPATIBILITY</span>
                 <span className="text-foreground font-medium">STEP, IGES, SolidWorks SLDPRT, OBJ, FBX</span>
-              </div>
-              <div>
-                <span className="text-[10px] text-muted-foreground uppercase block">WEB FRAMEWORK</span>
-                <span className="text-foreground font-medium">Next.js 14 (App Router), TypeScript, Tailwind</span>
               </div>
             </div>
           </div>

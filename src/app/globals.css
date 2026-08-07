@@ -4,8 +4,8 @@
   :root {
     --background: #ffffff;
     --foreground: #141414;
-    --muted: #737373;
-    --muted-foreground: #a3a3a3;
+    --muted: #f4f4f5;
+    --muted-foreground: #525252;
     --border: #e5e5e5;
     --card: #fafafa;
     --card-foreground: #141414;
@@ -16,8 +16,8 @@
   .dark {
     --background: #0f0f0f;
     --foreground: #f5f5f5;
-    --muted: #999999;
-    --muted-foreground: #525252;
+    --muted: #262626;
+    --muted-foreground: #a3a3a3;
     --border: #262626;
     --card: #141414;
     --card-foreground: #f5f5f5;

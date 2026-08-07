@@ -1,3 +1,12 @@
+export interface ClientReview {
+  projectTitle?: string;
+  rating: number;
+  dateRange?: string;
+  comment: string;
+  endorsement?: string;
+  attributes?: string[];
+}
+
 export interface Project {
   slug: string;
   title: string;
@@ -11,6 +20,8 @@ export interface Project {
   brief: string;
   process: string[];
   featured: boolean;
+  review?: ClientReview;
+  liveUrl?: string;
 }
 
 export interface PricingTier {
@@ -38,8 +49,8 @@ export interface Capabilities {
 export const SITE_METADATA = {
   title: "TALHA — 3D Hardware Visualization & Web Configurators",
   author: "Talha",
-  positioning: "3D visualization for hardware companies that don't have a CAD-to-render pipeline yet.",
-  bio: "Specialized in turning raw industrial CAD files into interactive web configurators, high-fidelity photorealistic product stills, and real-time 3D experiences.",
+  positioning: "High-precision 3D visualization, CAD optimization, and real-to-sim digital twin assets for hardware & robotics leaders.",
+  bio: "Specialized in converting raw industrial CAD into web-ready 3D catalog assets, simulation-ready digital twins for AI & robotics platforms (Isaac Sim / MuJoCo), and photorealistic product marketing renders.",
   location: "UTC+6 · Available for global remote contracts",
   email: "contact@talha.design",
   socials: {
@@ -61,88 +72,75 @@ export const CAPABILITIES: string[] = [
 
 export const PROJECTS: Project[] = [
   {
-    slug: "hyperion-gtr-configurator",
-    title: "Hyperion GTR Real-Time Configurator",
-    category: "Web 3D Configurator",
-    client: "Hyperion Dynamics",
+    slug: "camera-control-cinema-robots",
+    title: "Camera Control — Cinema Robotics Suite",
+    category: "Product Renders & 3D Modeling",
+    client: "Camera Control (Los Angeles)",
     year: "2026",
-    summary: "Interactive real-time 3D car configurator powered by PlayCanvas with instant trim, paint, and wheel customization.",
-    tools: ["Blender", "PlayCanvas", "WebGL", "JavaScript", "GLTF/GLB"],
-    heroImage: "https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=1600&q=80",
-    gallery: [
-      "https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1544829099-b9a0c07fad1a?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1200&q=80",
-    ],
-    brief: "Hyperion Dynamics needed a lightweight, high-fps web configurator for their upcoming sports prototype to embed directly on pre-order landing pages without heavy loading times.",
-    process: [
-      "Optimized dense STEP CAD assemblies into clean quad topology, reducing polygon count by 78% while preserving hard-surface bevels.",
-      "Developed custom PBR shader materials for metallic flake paints, exposed carbon fiber weave, and glass refraction within PlayCanvas.",
-      "Built low-latency state synchronization with React UI controls for real-time variant switching.",
-    ],
-    featured: true,
-  },
-  {
-    slug: "apex-industrial-arm",
-    title: "Apex Robotics Arm — Hardware Viz",
-    category: "Product Renders",
-    client: "Apex Robotics",
-    year: "2025",
-    summary: "High-resolution technical renders and explosive assembly views for an industrial 6-axis articulated robot arm.",
+    summary: "High-resolution product renders for 13 cinema camera robots, transforming raw CAD files and ground-up models into uniform website catalog assets for CameraControl.com.",
     tools: ["SolidWorks", "Blender", "Substance Painter", "Cycles"],
-    heroImage: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1600&q=80",
+    heroImage: "/camera_control/cinebot_nano/cinebot-nano.webp",
     gallery: [
-      "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&q=80",
+      "/camera_control/scout/scout.webp",
+      "/camera_control/milo/milo.webp",
+      "/camera_control/bolt/bolt.webp",
+      "/camera_control/doggicam/doggicam.webp",
     ],
-    brief: "Create marketing hero stills and exploded technical diagrams showing internal planetary gearsets for product catalog launch.",
+    brief: "Camera Control, an LA-based industry leader in motion control camera rigs, needed their complete fleet of 13 cinema robots rendered with consistent studio lighting, corrected CAD geometry, and custom props for their main website.",
     process: [
-      "Extracted production CAD parts directly from SolidWorks.",
-      "Created procedural anodized aluminum and industrial powder-coat materials.",
-      "Configured studio lighting rigs for crisp, technical accentuation of precision machined surfaces.",
+      "Converted complex raw CAD files into optimized render topology, fixing geometry bugs and surface defects.",
+      "Built specialized motion control robot models from the ground up based on physical hardware specs.",
+      "Engineered a unified studio environment with consistent backdrop lighting and props now hosted on CameraControl.com.",
     ],
     featured: true,
+    review: {
+      projectTitle: "13 Cinema Robots Rigged & Textured",
+      rating: 5.0,
+      dateRange: "April 2026 - August 2026",
+      comment: "Client review pending publication on profile...",
+      endorsement: "Endorsed by client",
+      attributes: [
+        "Committed to Quality",
+        "Clear Communicator",
+        "Detail Oriented"
+      ],
+    },
+    liveUrl: "https://cameracontrol.com",
   },
   {
-    slug: "orbit-watch-chassis",
-    title: "Orbit Mechanical Enclosure",
-    category: "ZBrush & Render",
-    client: "Orbit Horology",
-    year: "2025",
-    summary: "Precision sculpt and mechanical visualization for a skeletonized titanium timepiece chassis.",
-    tools: ["ZBrush", "KeyShot", "Photoshop"],
-    heroImage: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1600&q=80",
+    slug: "simbridge-simulation-assets",
+    title: "Simbridge — Simulation-Ready Appliances",
+    category: "Real-to-Sim 3D Assets",
+    client: "Simbridge",
+    year: "2026",
+    summary: "Ultra-optimized, photorealistic 3D home appliance models engineered for robotic manipulation and training in Isaac Sim and MuJoCo.",
+    tools: ["Blender", "Substance Painter", "USD / URDF", "Isaac Sim", "MuJoCo"],
+    heroImage: "/simbridge/hero/hero.webp",
     gallery: [
-      "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=1200&q=80",
+      "/simbridge/fridge/fridge.webp",
+      "/simbridge/stove/stove.webp",
+      "/simbridge/dishwasher/dishwasher.webp",
+      "/simbridge/sink/sink.webp",
     ],
-    brief: "Sculpt complex curved chamfers and micro-textures on a titanium grade-5 watch case for high-end luxury print collateral.",
+    brief: "Simbridge, a Santa Clara based AI Simulation company, required highly realistic, performance-tuned 3D home appliances (fridge, stove, dishwasher, sink) to populate real-to-sim environments for training AI and robotics models.",
     process: [
-      "Detailed organic ergonomics in ZBrush using boolean surface operations.",
-      "Generated micro-brushed metal textures and anti-reflective sapphire crystal reflections.",
-      "Rendered 8K hero stills for print displays.",
+      "Retopologized raw CAD geometry into clean quad-to-tri topology optimized for real-time simulation engines.",
+      "Configured precise pivot points and kinematic axes for accurate door, drawer, and hinge manipulation.",
+      "Baked crisp PBR maps and normal textures to deliver photorealism without compromising physics frame rates.",
     ],
     featured: true,
-  },
-  {
-    slug: "quantum-vr-headset",
-    title: "Quantum HMD — Hardware Prototype",
-    category: "Animation & Stills",
-    client: "Quantum Labs",
-    year: "2025",
-    summary: "Photorealistic product visualization and 360-degree rotation study for next-gen optical VR headset.",
-    tools: ["Rhino", "Blender", "Octane Render"],
-    heroImage: "https://images.unsplash.com/photo-1593508512255-86ab42a8e620?auto=format&fit=crop&w=1600&q=80",
-    gallery: [
-      "https://images.unsplash.com/photo-1593508512255-86ab42a8e620?auto=format&fit=crop&w=1200&q=80",
-    ],
-    brief: "Visualize lightweight fabric mesh, optical lenses, and heat dissipation vents before physical prototype manufacturing.",
-    process: [
-      "Converted IGES surface CAD data into render-ready meshes.",
-      "Simulated fabric weave textures and micro-perforated silicone pads.",
-      "Rendered lighting passes for dark mode website marketing integration.",
-    ],
-    featured: false,
+    review: {
+      projectTitle: "Digital Twin creation for appliances",
+      rating: 5.0,
+      dateRange: "May 25, 2026 - Jun 26, 2026",
+      comment: "I worked with Talha on generating digital twins for kitchen appliances. He was very responsive and clear with his communication ensuring all details could be agreed on with no surprises during or at the end of each milestone. The output was exactly as planned!",
+      endorsement: "Endorsed by client",
+      attributes: [
+        "Committed to Quality",
+        "Clear Communicator",
+        "Detail Oriented"
+      ],
+    },
   },
 ];
 

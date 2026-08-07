@@ -37,8 +37,8 @@ export default function HomePage() {
                 View Case Studies
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
-              <Button href="/configurator" variant="outline" size="lg">
-                Launch 3D Configurator
+              <Button href="/contact" variant="outline" size="lg">
+                Inquire About 3D Web Apps
                 <Box className="w-4 h-4 ml-2 text-accent" />
               </Button>
             </div>
@@ -112,18 +112,21 @@ export default function HomePage() {
       <Section bordered className="bg-card">
         <FadeIn className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           <div className="lg:col-span-5 space-y-6">
-            <Tag variant="accent">INTERACTIVE 3D DEMO</Tag>
+            <div className="flex items-center space-x-2">
+              <Tag variant="accent">INTERACTIVE 3D DEMO</Tag>
+              <Tag variant="outline" className="text-amber-400 border-amber-400/30">COMING SOON</Tag>
+            </div>
             <h2 className="font-mono text-2xl md:text-4xl font-bold text-foreground leading-tight">
               Real-Time Web 3D Car Configurator
             </h2>
             <p className="text-sm text-muted-foreground leading-relaxed font-sans">
-              Experience dynamic paint, trim, and wheel customization embedded directly into a lightweight WebGL PlayCanvas viewport. Zero layout shifts, high-fps performance.
+              Interact with our lightweight WebGL PlayCanvas demo directly inside the viewport. We are currently engineering a full standalone configurator studio — full launch coming soon!
             </p>
             <div className="pt-2">
-              <Button href="/configurator" variant="primary" size="md">
-                Launch Fullscreen Configurator
-                <ArrowRight className="w-4 h-4 ml-2" />
-              </Button>
+              <div className="inline-flex items-center space-x-2 px-4 py-2.5 bg-background border border-border font-mono text-xs text-foreground uppercase tracking-widest">
+                <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse" />
+                <span>Full Studio Configurator — Coming Soon</span>
+              </div>
             </div>
           </div>
 

@@ -3,10 +3,11 @@ import Link from "next/link";
 import { cn } from "@/lib/utils";
 
 export interface ButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
   variant?: "primary" | "secondary" | "outline" | "ghost";
   size?: "sm" | "md" | "lg";
   href?: string;
+  disabled?: boolean;
 }
 
 export function Button({
@@ -16,6 +17,8 @@ export function Button({
   size = "md",
   href,
   disabled,
+  target,
+  rel,
   ...props
 }: ButtonProps) {
   const baseClasses = cn(
@@ -36,14 +39,14 @@ export function Button({
 
   if (href) {
     return (
-      <Link href={href} className={baseClasses}>
+      <Link href={href} target={target} rel={rel} className={baseClasses}>
         {children}
       </Link>
     );
   }
 
   return (
-    <button className={baseClasses} disabled={disabled} {...props}>
+    <button className={baseClasses} disabled={disabled} {...(props as React.ButtonHTMLAttributes<HTMLButtonElement>)}>
       {children}
     </button>
   );

@@ -9,7 +9,6 @@ import { Menu, X, Box } from "lucide-react";
 
 const NAV_ITEMS = [
   { label: "WORK", href: "/work" },
-  { label: "CONFIGURATOR", href: "/configurator" },
   { label: "SERVICES", href: "/services" },
   { label: "PRICING", href: "/pricing" },
   { label: "ABOUT", href: "/about" },
@@ -29,7 +28,7 @@ export function Header() {
             <Box className="w-4 h-4 text-accent" />
           </div>
           <span className="font-bold text-foreground">TALHA</span>
-          <span className="text-muted-foreground text-xs font-normal">// 3D</span>
+          <span className="text-muted-foreground text-xs font-normal">// STUDIO XYZ</span>
         </Link>
 
         {/* Desktop Navigation */}
