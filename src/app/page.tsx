@@ -114,19 +114,19 @@ export default function HomePage() {
           <div className="lg:col-span-5 space-y-6">
             <div className="flex items-center space-x-2">
               <Tag variant="accent">INTERACTIVE 3D DEMO</Tag>
-              <Tag variant="outline" className="text-amber-400 border-amber-400/30">COMING SOON</Tag>
+              <Tag variant="accent" className="bg-emerald-500/10 text-emerald-400 border-emerald-500/30">STUDIO NOW LIVE</Tag>
             </div>
             <h2 className="font-mono text-2xl md:text-4xl font-bold text-foreground leading-tight">
               Real-Time Web 3D Car Configurator
             </h2>
             <p className="text-sm text-muted-foreground leading-relaxed font-sans">
-              Interact with our lightweight WebGL PlayCanvas demo directly inside the viewport. We are currently engineering a full standalone configurator studio — full launch coming soon!
+              Interact with our lightweight WebGL PlayCanvas demo directly inside the viewport. Customize paint finishes, Weissach magnesium rims, race Alcantara trim, and kinematic doors in real-time.
             </p>
             <div className="pt-2">
-              <div className="inline-flex items-center space-x-2 px-4 py-2.5 bg-background border border-border font-mono text-xs text-foreground uppercase tracking-widest">
-                <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse" />
-                <span>Full Studio Configurator — Coming Soon</span>
-              </div>
+              <Button href="/configurator" variant="primary" size="md" className="font-mono text-xs uppercase">
+                Launch Full 3D Configurator Studio
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </Button>
             </div>
           </div>
 

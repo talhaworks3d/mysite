@@ -22,7 +22,7 @@ export function Section({
       )}
       {...props}
     >
-      <div className={cn("max-w-7xl mx-auto px-4 sm:px-6 lg:px-8", containerClassName)}>
+      <div className={cn("max-w-[1800px] mx-auto px-4 sm:px-6 lg:px-8", containerClassName)}>
         {children}
       </div>
     </section>

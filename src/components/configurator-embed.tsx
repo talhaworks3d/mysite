@@ -18,7 +18,7 @@ export default function ConfiguratorEmbed({
   const [loaded, setLoaded] = useState(false);
   const [active, setActive] = useState(autoActivate);
 
-  const embedUrl = "https://playcanv.as/b/c8bfab9f";
+  const embedUrl = "https://playcanv.as/apps/881852a9/index.html";
 
   return (
     <div
