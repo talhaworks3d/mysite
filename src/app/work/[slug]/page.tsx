@@ -66,25 +66,25 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
             )}
           </div>
 
-          <h1 className="font-mono text-3xl sm:text-5xl font-bold text-foreground tracking-tight leading-tight">
+          <h1 className="text-7xl font-sans font-bold text-foreground tracking-tight leading-tight">
             {project.title}
           </h1>
 
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 pt-4 font-mono text-xs text-muted-foreground border-t border-border/60">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 pt-4 text-sm font-mono text-muted-foreground border-t border-border/60">
             <div>
-              <span className="block text-[10px] uppercase text-muted-foreground">CLIENT</span>
+              <span className="block text-xs uppercase text-muted-foreground">CLIENT</span>
               <span className="text-foreground font-medium">{project.client}</span>
             </div>
             <div>
-              <span className="block text-[10px] uppercase text-muted-foreground">ROLE</span>
+              <span className="block text-xs uppercase text-muted-foreground">ROLE</span>
               <span className="text-foreground font-medium">3D Lead & Technical Artist</span>
             </div>
             <div>
-              <span className="block text-[10px] uppercase text-muted-foreground">YEAR</span>
+              <span className="block text-xs uppercase text-muted-foreground">YEAR</span>
               <span className="text-foreground font-medium">{project.year}</span>
             </div>
             <div>
-              <span className="block text-[10px] uppercase text-muted-foreground">DELIVERABLES</span>
+              <span className="block text-xs uppercase text-muted-foreground">DELIVERABLES</span>
               <span className="text-foreground font-medium">Render Set & Assets</span>
             </div>
           </div>
@@ -106,17 +106,17 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 pt-4">
           <div className="lg:col-span-4 space-y-6">
             <div className="border-l-2 border-accent pl-4 space-y-2">
-              <span className="font-mono text-xs text-accent uppercase tracking-wider block">
+              <span className="text-sm font-mono text-accent uppercase tracking-wider block">
                 THE BRIEF
               </span>
-              <p className="text-sm text-foreground font-sans leading-relaxed">
+              <p className="text-sm font-mono text-foreground leading-relaxed">
                 {project.brief}
               </p>
             </div>
 
             {/* Tools Used */}
             <div className="space-y-3 pt-4 border-t border-border">
-              <span className="font-mono text-xs text-muted-foreground uppercase tracking-wider block">
+              <span className="text-sm font-mono text-muted-foreground uppercase tracking-wider block">
                 SOFTWARE & TOOLS USED
               </span>
               <div className="flex flex-wrap gap-2">
@@ -130,10 +130,10 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
           </div>
 
           <div className="lg:col-span-8 space-y-6">
-            <h2 className="font-mono text-xl font-bold text-foreground border-b border-border pb-3">
+            <h2 className="text-xl font-sans font-bold text-foreground border-b border-border pb-3">
               Technical Implementation & Process
             </h2>
-            <div className="space-y-4 font-sans text-sm text-muted-foreground leading-relaxed">
+            <div className="space-y-4 text-sm font-mono text-muted-foreground leading-relaxed">
               {project.process.map((step, idx) => (
                 <div key={idx} className="flex items-start space-x-3 bg-card p-4 border border-border">
                   <CheckCircle className="w-4 h-4 text-accent shrink-0 mt-0.5" />
@@ -147,18 +147,18 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
         {/* Client Review Section */}
         {project.review && (
           <div className="pt-8 border-t border-border space-y-4">
-            <div className="font-mono text-xs text-accent uppercase tracking-widest">
+            <div className="text-sm font-mono text-accent uppercase tracking-widest">
               VERIFIED CLIENT REVIEW
             </div>
             <div className="border border-border bg-card p-6 sm:p-8 space-y-6 relative overflow-hidden">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-border/60 pb-6">
                 <div>
                   {project.review.projectTitle && (
-                    <h3 className="font-mono text-base font-bold text-foreground">
+                    <h3 className="text-xl font-sans font-bold text-foreground">
                       {project.review.projectTitle}
                     </h3>
                   )}
-                  <div className="flex flex-wrap items-center gap-3 mt-2 font-mono text-xs text-muted-foreground">
+                  <div className="flex flex-wrap items-center gap-3 mt-2 text-sm font-mono text-muted-foreground">
                     {project.review.dateRange && (
                       <span className="flex items-center">
                         <Calendar className="w-3.5 h-3.5 mr-1.5 text-accent" />
@@ -166,7 +166,7 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
                       </span>
                     )}
                     {project.review.endorsement && (
-                      <span className="flex items-center text-emerald-400 font-medium bg-emerald-500/10 border border-emerald-500/20 px-2 py-0.5 rounded text-[11px]">
+                      <span className="flex items-center text-emerald-400 font-medium bg-emerald-500/10 border border-emerald-500/20 px-2 py-0.5 rounded text-xs">
                         <ShieldCheck className="w-3.5 h-3.5 mr-1" />
                         {project.review.endorsement}
                       </span>
@@ -183,25 +183,25 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
                       />
                     ))}
                   </div>
-                  <span className="font-mono text-sm font-bold text-foreground">
+                  <span className="text-sm font-mono font-bold text-foreground">
                     {project.review.rating.toFixed(1)}
                   </span>
                 </div>
               </div>
 
-              <blockquote className="relative pl-4 border-l-2 border-accent font-sans text-sm text-foreground/90 leading-relaxed italic">
+              <blockquote className="relative pl-4 border-l-2 border-accent text-sm font-mono text-foreground/90 leading-relaxed italic">
                 "{project.review.comment}"
               </blockquote>
 
               {project.review.attributes && project.review.attributes.length > 0 && (
-                <div className="pt-2 flex flex-wrap items-center gap-2 font-mono text-xs">
-                  <span className="text-muted-foreground text-[11px] uppercase mr-1">
+                <div className="pt-2 flex flex-wrap items-center gap-2 text-sm font-mono">
+                  <span className="text-muted-foreground text-xs uppercase mr-1">
                     Client Badges:
                   </span>
                   {project.review.attributes.map((attr) => (
                     <span
                       key={attr}
-                      className="inline-flex items-center space-x-1.5 bg-accent/10 border border-accent/30 text-accent px-2.5 py-1 text-xs"
+                      className="inline-flex items-center space-x-1.5 bg-accent/10 border border-accent/30 text-accent px-2.5 py-1 text-sm font-mono"
                     >
                       <ThumbsUp className="w-3 h-3" />
                       <span>{attr}</span>
@@ -216,10 +216,10 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
         {/* 4. Image Gallery */}
         <div className="space-y-6 pt-6 border-t border-border">
           <div className="flex items-center justify-between">
-            <h2 className="font-mono text-xl font-bold text-foreground">
+            <h2 className="text-xl font-sans font-bold text-foreground">
               Render Gallery
             </h2>
-            <span className="font-mono text-xs text-muted-foreground">
+            <span className="text-sm font-mono text-muted-foreground">
               Click any render for high-res view
             </span>
           </div>
@@ -232,10 +232,10 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
             href={`/work/${prevProject.slug}`}
             className="group border border-border bg-card p-6 flex flex-col justify-between hover:border-foreground transition-colors"
           >
-            <span className="font-mono text-[11px] text-muted-foreground uppercase flex items-center">
+            <span className="text-xs text-muted-foreground uppercase flex items-center">
               <ArrowLeft className="w-3.5 h-3.5 mr-1" /> PREVIOUS CASE STUDY
             </span>
-            <span className="font-mono text-sm font-semibold text-foreground group-hover:text-accent mt-2">
+            <span className="text-sm font-mono font-semibold text-foreground group-hover:text-accent mt-2">
               {prevProject.title}
             </span>
           </Link>
@@ -244,10 +244,10 @@ export default async function CaseStudyPage({ params }: CaseStudyPageProps) {
             href={`/work/${nextProject.slug}`}
             className="group border border-border bg-card p-6 flex flex-col justify-between items-end text-right hover:border-foreground transition-colors"
           >
-            <span className="font-mono text-[11px] text-muted-foreground uppercase flex items-center">
+            <span className="text-xs text-muted-foreground uppercase flex items-center">
               NEXT CASE STUDY <ArrowRight className="w-3.5 h-3.5 ml-1" />
             </span>
-            <span className="font-mono text-sm font-semibold text-foreground group-hover:text-accent mt-2">
+            <span className="text-sm font-mono font-semibold text-foreground group-hover:text-accent mt-2">
               {nextProject.title}
             </span>
           </Link>

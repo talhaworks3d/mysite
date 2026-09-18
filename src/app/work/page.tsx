@@ -25,11 +25,11 @@ export default function WorkPage() {
       <FadeIn className="space-y-8">
         <div className="border-b border-border pb-8 space-y-4">
           <Tag variant="accent">PORTFOLIO INDEX</Tag>
-          <h1 className="font-mono text-3xl md:text-5xl font-bold text-foreground tracking-tight">
-            Work & Case Studies
+          <h1 className="text-7xl font-sans font-bold text-foreground tracking-tight">
+            Work
           </h1>
-          <p className="text-sm md:text-base text-muted-foreground font-sans max-w-2xl">
-            Selected 3D hardware visualizations, real-time WebGL configurators, and mechanical product renders built directly from engineering CAD files.
+          <p className="text-xl font-mono text-muted-foreground max-w-xl">
+            3D hardware visualizations, real-time WebGL configurators, and product renders.
           </p>
         </div>
 
@@ -41,7 +41,7 @@ export default function WorkPage() {
               <button
                 key={category}
                 onClick={() => setSelectedCategory(category)}
-                className={`font-mono text-xs uppercase px-3 py-1.5 border transition-all ${
+                className={`text-sm font-mono uppercase px-3 py-1.5 border transition-all ${
                   isSelected
                     ? "border-foreground bg-foreground text-background font-semibold"
                     : "border-border text-muted-foreground hover:border-foreground hover:text-foreground bg-card"

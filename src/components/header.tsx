@@ -25,16 +25,15 @@ export function Header() {
       <div className="max-w-[1800px] mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         {/* Brand / Logo + Navigation immediately from the left */}
         <div className="flex items-center space-x-8 lg:space-x-12">
-          <Link href="/" className="group flex items-center space-x-2 font-mono text-sm tracking-wider shrink-0">
-            <div className="w-7 h-7 border border-border group-hover:border-foreground flex items-center justify-center bg-card transition-colors">
-              <Box className="w-4 h-4 text-accent" />
+          <Link href="/" className="group flex items-center space-x-2 text-sm font-mono tracking-wider shrink-0">
+            <div className="w-7 h-7 border border-border group-hover:bg-foreground group-hover:border-foreground flex items-center justify-center bg-card transition-all duration-300">
+              <Box className="w-4 h-4 text-foreground group-hover:text-background transition-colors duration-300" />
             </div>
-            <span className="font-bold text-foreground">TALHA</span>
-            <span className="text-muted-foreground text-xs font-normal">// STUDIO XYZ</span>
+            <span className="font-bold text-muted-foreground group-hover:text-foreground tracking-widest transition-colors duration-300">STUDIO XYZ</span>
           </Link>
 
           {/* Desktop Navigation immediately following brand name */}
-          <nav className="hidden md:flex items-center space-x-6 lg:space-x-8 font-mono text-xs tracking-widest">
+          <nav className="hidden md:flex items-center space-x-6 lg:space-x-8 text-sm font-mono tracking-widest">
             {NAV_ITEMS.map((item) => {
               const isActive = pathname === item.href;
               return (
@@ -73,14 +72,14 @@ export function Header() {
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="md:hidden border-b border-border bg-background px-4 py-6 space-y-4 font-mono text-xs">
+        <div className="md:hidden border-b border-border bg-background px-4 py-6 space-y-4 text-sm font-mono">
           {NAV_ITEMS.map((item) => (
             <Link
               key={item.href}
               href={item.href}
               onClick={() => setMobileMenuOpen(false)}
               className={cn(
-                "block py-2 text-sm tracking-wider border-b border-border/40",
+                "block py-2 text-sm font-mono tracking-wider border-b border-border/40",
                 pathname === item.href ? "text-accent font-semibold" : "text-muted-foreground"
               )}
             >

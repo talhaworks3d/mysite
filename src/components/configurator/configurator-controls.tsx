@@ -49,7 +49,7 @@ export function ConfiguratorControls() {
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
               className={cn(
-                "flex-1 min-w-[90px] py-3 px-3 font-mono text-xs tracking-wider flex flex-col sm:flex-row items-center justify-center space-y-1 sm:space-y-0 sm:space-x-2 border-r border-border last:border-r-0 transition-colors cursor-pointer",
+                "flex-1 min-w-[120px] py-3 px-3 text-sm font-mono tracking-wider flex flex-col sm:flex-row items-center justify-center space-y-1 sm:space-y-0 sm:space-x-2 border-r border-border last:border-r-0 transition-colors cursor-pointer",
                 isActive
                   ? "bg-card text-foreground font-bold border-b-2 border-b-accent"
                   : "text-muted-foreground hover:text-foreground hover:bg-muted/30"
@@ -69,25 +69,25 @@ export function ConfiguratorControls() {
           <div className="space-y-6">
             <div className="space-y-1">
               <div className="flex items-center justify-between">
-                <h3 className="font-mono text-sm font-bold text-foreground uppercase tracking-wider">
+                <h3 className="text-xl font-sans font-bold text-foreground uppercase tracking-wider">
                   Exterior Color Finish
                 </h3>
-                <span className="text-xs font-mono text-accent">
+                <span className="text-sm font-mono text-accent">
                   {state.paint.name}
                 </span>
               </div>
-              <p className="text-xs text-muted-foreground font-sans">
-                Select from standard high-pigment solids, metallic clearcoats, or special multi-layer paint formulations.
+              <p className="text-sm font-mono text-muted-foreground ">
+                Select from standard solids, metallic clearcoats, or special paint formulations.
               </p>
             </div>
 
             {/* Standard Tiers */}
             <div className="space-y-2">
-              <div className="flex items-center justify-between font-mono text-xs text-muted-foreground uppercase border-b border-border/50 pb-1">
+              <div className="flex items-center justify-between text-sm font-mono text-muted-foreground uppercase border-b border-border/50 pb-1">
                 <span>Standard Colors</span>
                 <span>Included</span>
               </div>
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
+              <div className="grid grid-cols-[repeat(auto-fill,minmax(140px,1fr))] gap-2">
                 {standardPaints.map((option) => (
                   <PaintSwatchCard
                     key={option.id}
@@ -101,11 +101,11 @@ export function ConfiguratorControls() {
 
             {/* Metallic Tiers */}
             <div className="space-y-2">
-              <div className="flex items-center justify-between font-mono text-xs text-muted-foreground uppercase border-b border-border/50 pb-1">
+              <div className="flex items-center justify-between text-sm font-mono text-muted-foreground uppercase border-b border-border/50 pb-1">
                 <span>Metallic Finishes</span>
                 <span>+ $1,800 – $11,900</span>
               </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+              <div className="grid grid-cols-[repeat(auto-fill,minmax(140px,1fr))] gap-2">
                 {metallicPaints.map((option) => (
                   <PaintSwatchCard
                     key={option.id}
@@ -119,11 +119,11 @@ export function ConfiguratorControls() {
 
             {/* Special Tiers */}
             <div className="space-y-2">
-              <div className="flex items-center justify-between font-mono text-xs text-muted-foreground uppercase border-b border-border/50 pb-1">
+              <div className="flex items-center justify-between text-sm font-mono text-muted-foreground uppercase border-b border-border/50 pb-1">
                 <span>Special Colors</span>
                 <span>+ $3,200</span>
               </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+              <div className="grid grid-cols-[repeat(auto-fill,minmax(140px,1fr))] gap-2">
                 {specialPaints.map((option) => (
                   <PaintSwatchCard
                     key={option.id}
@@ -141,11 +141,11 @@ export function ConfiguratorControls() {
         {activeTab === "wheels" && (
           <div className="space-y-6">
             <div className="space-y-1">
-              <h3 className="font-mono text-sm font-bold text-foreground uppercase tracking-wider">
+              <h3 className="text-xl font-sans font-bold text-foreground uppercase tracking-wider">
                 Wheel Assembly & Rims
               </h3>
-              <p className="text-xs text-muted-foreground font-sans">
-                Precision-engineered aluminum alloy and magnesium wheel sets designed for high-speed stability and aerodynamic downforce.
+              <p className="text-sm font-mono text-muted-foreground ">
+                Precision-engineered wheel sets designed for high-speed stability.
               </p>
             </div>
 
@@ -166,17 +166,17 @@ export function ConfiguratorControls() {
                     <div className="flex items-start justify-between">
                       <div className="space-y-1">
                         <div className="flex items-center space-x-2">
-                          <span className="font-mono text-sm font-bold text-foreground uppercase">
+                          <span className="text-xl font-sans font-bold text-foreground uppercase">
                             {wheel.name}
                           </span>
                           {wheel.id === "weissach" && (
-                            <span className="px-1.5 py-0.5 bg-amber-400/10 border border-amber-400/30 text-amber-500 font-mono text-[10px] uppercase flex items-center space-x-1">
+                            <span className="px-1.5 py-0.5 bg-amber-400/10 border border-amber-400/30 text-amber-500 text-sm font-mono uppercase flex items-center space-x-1">
                               <Sparkles className="w-3 h-3" />
                               <span>Race Spec</span>
                             </span>
                           )}
                         </div>
-                        <p className="text-xs text-muted-foreground font-sans leading-relaxed">
+                        <p className="text-sm font-mono text-muted-foreground leading-relaxed">
                           {wheel.description}
                         </p>
                       </div>
@@ -189,7 +189,7 @@ export function ConfiguratorControls() {
                       )}
                     </div>
 
-                    <div className="pt-2 border-t border-border/50 flex items-center justify-between font-mono text-xs">
+                    <div className="pt-2 border-t border-border/50 flex items-center justify-between text-sm font-mono">
                       <span className="text-muted-foreground">PRICE DELTA:</span>
                       <span className={isSelected ? "text-accent font-bold" : "text-foreground"}>
                         {wheel.price === 0 ? "STANDARD" : `+$${wheel.price.toLocaleString()}`}
@@ -206,11 +206,11 @@ export function ConfiguratorControls() {
         {activeTab === "trim" && (
           <div className="space-y-6">
             <div className="space-y-1">
-              <h3 className="font-mono text-sm font-bold text-foreground uppercase tracking-wider">
+              <h3 className="text-xl font-sans font-bold text-foreground uppercase tracking-wider">
                 Cockpit Interior Upholstery
               </h3>
-              <p className="text-xs text-muted-foreground font-sans">
-                Customize dash surrounds, door pull wraps, and race bucket seat trim packages.
+              <p className="text-sm font-mono text-muted-foreground ">
+                Customize dash surrounds, door pull wraps, and seat trim packages.
               </p>
             </div>
 
@@ -230,10 +230,10 @@ export function ConfiguratorControls() {
                   >
                     <div className="flex items-start justify-between">
                       <div className="space-y-1">
-                        <span className="font-mono text-sm font-bold text-foreground uppercase block">
+                        <span className="text-xl font-sans font-bold text-foreground uppercase block">
                           {trim.name}
                         </span>
-                        <p className="text-xs text-muted-foreground font-sans leading-relaxed">
+                        <p className="text-sm font-mono text-muted-foreground leading-relaxed">
                           {trim.description}
                         </p>
                       </div>
@@ -246,7 +246,7 @@ export function ConfiguratorControls() {
                       )}
                     </div>
 
-                    <div className="pt-2 border-t border-border/50 flex items-center justify-between font-mono text-xs">
+                    <div className="pt-2 border-t border-border/50 flex items-center justify-between text-sm font-mono">
                       <span className="text-muted-foreground">TIER COST:</span>
                       <span className={isSelected ? "text-accent font-bold" : "text-foreground"}>
                         {trim.price === 0 ? "INCLUDED" : `+$${trim.price.toLocaleString()}`}
@@ -263,23 +263,23 @@ export function ConfiguratorControls() {
         {activeTab === "doors" && (
           <div className="space-y-6">
             <div className="space-y-1">
-              <h3 className="font-mono text-sm font-bold text-foreground uppercase tracking-wider">
+              <h3 className="text-xl font-sans font-bold text-foreground uppercase tracking-wider">
                 Kinematic Articulation Controls
               </h3>
-              <p className="text-xs text-muted-foreground font-sans">
-                Real-time PlayCanvas entity rotation testing door clearances and sill articulation.
+              <p className="text-sm font-mono text-muted-foreground ">
+                Real-time PlayCanvas entity rotation testing door clearances.
               </p>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <div className="p-4 border border-border bg-background space-y-3">
                 <div className="flex items-center justify-between">
-                  <span className="font-mono text-xs font-bold text-foreground uppercase">
+                  <span className="text-sm font-mono font-bold text-foreground uppercase">
                     Left Driver Door
                   </span>
                   <span
                     className={cn(
-                      "px-2 py-0.5 font-mono text-[10px] uppercase border",
+                      "px-2 py-0.5 text-sm font-mono uppercase border",
                       state.doors.L
                         ? "bg-accent/10 border-accent text-accent font-bold"
                         : "bg-muted border-border text-muted-foreground"
@@ -290,7 +290,7 @@ export function ConfiguratorControls() {
                 </div>
                 <button
                   onClick={() => toggleDoor("L")}
-                  className="w-full py-2 bg-card border border-border hover:border-foreground/40 text-foreground font-mono text-xs uppercase tracking-wider transition-colors cursor-pointer"
+                  className="w-full py-2 bg-card border border-border hover:border-foreground/40 text-foreground text-sm font-mono uppercase tracking-wider transition-colors cursor-pointer"
                 >
                   {state.doors.L ? "Close Driver Door" : "Open Driver Door"}
                 </button>
@@ -298,12 +298,12 @@ export function ConfiguratorControls() {
 
               <div className="p-4 border border-border bg-background space-y-3">
                 <div className="flex items-center justify-between">
-                  <span className="font-mono text-xs font-bold text-foreground uppercase">
+                  <span className="text-sm font-mono font-bold text-foreground uppercase">
                     Right Passenger Door
                   </span>
                   <span
                     className={cn(
-                      "px-2 py-0.5 font-mono text-[10px] uppercase border",
+                      "px-2 py-0.5 text-sm font-mono uppercase border",
                       state.doors.R
                         ? "bg-accent/10 border-accent text-accent font-bold"
                         : "bg-muted border-border text-muted-foreground"
@@ -314,15 +314,15 @@ export function ConfiguratorControls() {
                 </div>
                 <button
                   onClick={() => toggleDoor("R")}
-                  className="w-full py-2 bg-card border border-border hover:border-foreground/40 text-foreground font-mono text-xs uppercase tracking-wider transition-colors cursor-pointer"
+                  className="w-full py-2 bg-card border border-border hover:border-foreground/40 text-foreground text-sm font-mono uppercase tracking-wider transition-colors cursor-pointer"
                 >
                   {state.doors.R ? "Close Passenger Door" : "Open Passenger Door"}
                 </button>
               </div>
             </div>
 
-            <div className="p-3 bg-muted/40 border border-border text-xs text-muted-foreground space-y-1.5 font-sans">
-              <div className="flex items-center space-x-1.5 font-mono text-foreground text-[11px] font-bold">
+            <div className="p-3 bg-muted/40 border border-border text-sm font-mono text-muted-foreground space-y-1.5 ">
+              <div className="flex items-center space-x-1.5 text-foreground text-sm font-mono font-bold">
                 <Info className="w-3.5 h-3.5 text-accent" />
                 <span>3D Kinematics Tech Note</span>
               </div>
@@ -350,14 +350,15 @@ function PaintSwatchCard({
     <button
       onClick={onSelect}
       className={cn(
-        "p-2.5 border text-left transition-all cursor-pointer flex items-center space-x-3 group relative",
+        "p-3 border text-left transition-all cursor-pointer flex items-center space-x-3 group relative",
         isSelected
           ? "bg-background border-accent shadow-xs"
           : "bg-card border-border hover:border-foreground/30 hover:bg-muted/20"
       )}
     >
+      {/* Color swatch */}
       <div
-        className="w-7 h-7 rounded-full border border-black/30 shrink-0 shadow-inner relative overflow-hidden"
+        className="w-8 h-8 rounded-full border border-black/20 shrink-0 shadow-inner relative overflow-hidden"
         style={{ backgroundColor: option.hex }}
       >
         {option.finish === "metallic" && (
@@ -365,19 +366,14 @@ function PaintSwatchCard({
         )}
       </div>
 
-      <div className="space-y-0.5 min-w-0 flex-1">
-        <span className="font-mono text-xs font-bold text-foreground truncate block">
-          {option.name}
-        </span>
-        <div className="flex items-center space-x-2 font-mono text-[10px] text-muted-foreground uppercase">
-          <span>{option.finish}</span>
-          <span>·</span>
-          <span>{option.hex}</span>
-        </div>
-      </div>
+      {/* Name only */}
+      <span className="text-sm font-mono font-bold text-foreground block">
+        {option.name}
+      </span>
 
+      {/* Checkmark — absolute top-right, never overlaps */}
       {isSelected && (
-        <div className="w-4 h-4 bg-accent text-accent-foreground flex items-center justify-center rounded-full shrink-0">
+        <div className="absolute top-1.5 right-1.5 w-4 h-4 bg-accent text-accent-foreground flex items-center justify-center rounded-full">
           <Check className="w-2.5 h-2.5" />
         </div>
       )}

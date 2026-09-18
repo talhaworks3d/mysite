@@ -12,11 +12,11 @@ export default function PricingPage() {
       <FadeIn className="space-y-12">
         <div className="border-b border-border pb-8 space-y-4">
           <Tag variant="accent">ESTIMATED TIERS & SCOPE</Tag>
-          <h1 className="font-mono text-3xl md:text-5xl font-bold text-foreground tracking-tight">
-            Transparent Pricing
+          <h1 className="text-7xl font-sans font-bold text-foreground tracking-tight">
+            Pricing
           </h1>
-          <p className="text-sm md:text-base text-muted-foreground font-sans max-w-2xl">
-            Starter packages for hardware product stills, render sets, and real-time PlayCanvas 3D web configurators.
+          <p className="text-xl font-mono text-muted-foreground max-w-xl">
+            Transparent packages for renders, render sets, and real-time 3D configurators.
           </p>
         </div>
 
@@ -32,27 +32,27 @@ export default function PricingPage() {
               }`}
             >
               {tier.recommended && (
-                <div className="absolute -top-3 left-4 bg-accent text-accent-foreground text-[10px] font-mono font-bold px-2 py-0.5 uppercase tracking-wider">
+                <div className="absolute -top-3 left-4 bg-accent text-accent-foreground text-xs font-bold px-2 py-0.5 uppercase tracking-wider">
                   MOST POPULAR
                 </div>
               )}
 
               <div className="space-y-4">
                 <div>
-                  <h3 className="font-mono text-base font-bold text-foreground">
+                  <h3 className="text-xl font-sans font-bold text-foreground">
                     {tier.name}
                   </h3>
-                  <p className="text-xs text-muted-foreground font-sans mt-1 leading-relaxed">
+                  <p className="text-sm font-mono text-muted-foreground mt-1 leading-relaxed">
                     {tier.tagline}
                   </p>
                 </div>
 
                 <div className="border-t border-b border-border/80 py-4 space-y-1">
-                  <div className="font-mono text-2xl font-bold text-foreground">
+                  <div className="text-7xl font-mono font-bold text-foreground">
                     {tier.price}
                   </div>
                   {tier.priceNote && (
-                    <div className="font-mono text-[10px] text-muted-foreground uppercase">
+                    <div className="text-xs text-muted-foreground uppercase">
                       {tier.priceNote}
                     </div>
                   )}
@@ -60,7 +60,7 @@ export default function PricingPage() {
 
                 <ul className="space-y-2.5 pt-2">
                   {tier.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-start text-xs font-mono text-muted-foreground">
+                    <li key={idx} className="flex items-start text-sm font-mono text-muted-foreground">
                       <Check className="w-3.5 h-3.5 text-accent shrink-0 mr-2 mt-0.5" />
                       <span>{feature}</span>
                     </li>
@@ -84,14 +84,14 @@ export default function PricingPage() {
 
         {/* Pricing Breakdown Matrix Table */}
         <div className="border border-border bg-card p-6 md:p-8 space-y-6">
-          <h2 className="font-mono text-lg font-bold text-foreground">
+          <h2 className="text-xl font-sans font-bold text-foreground">
             Full Service Comparison Matrix
           </h2>
 
           <div className="overflow-x-auto">
-            <table className="w-full text-left font-mono text-xs border-collapse">
+            <table className="w-full text-left text-sm font-mono border-collapse">
               <thead>
-                <tr className="border-b border-border text-muted-foreground text-[11px]">
+                <tr className="border-b border-border text-muted-foreground text-xs">
                   <th className="py-3 px-4 uppercase">Deliverable / Scope</th>
                   <th className="py-3 px-4 uppercase">Single Still</th>
                   <th className="py-3 px-4 uppercase">Render Set</th>
@@ -136,11 +136,11 @@ export default function PricingPage() {
         {/* Custom Scope CTA */}
         <div className="border border-border bg-background p-8 flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="space-y-1">
-            <h3 className="font-mono text-base font-bold text-foreground">
-              Need full site integration or custom NDA enterprise scope?
+            <h3 className="text-xl font-sans font-bold text-foreground">
+              Need custom or enterprise scope?
             </h3>
-            <p className="text-xs text-muted-foreground font-sans">
-              Contact directly to discuss enterprise volume rates, customized PlayCanvas shaders, or site build integration.
+            <p className="text-sm font-mono text-muted-foreground ">
+              Volume rates, custom shaders, or full site integration — get in touch.
             </p>
           </div>
           <Button href="/contact" variant="primary" size="md" className="shrink-0">

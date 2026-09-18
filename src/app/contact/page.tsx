@@ -12,11 +12,11 @@ export default function ContactPage() {
       <FadeIn className="space-y-12">
         <div className="border-b border-border pb-8 space-y-4">
           <Tag variant="accent">DIRECT TRANSMISSION</Tag>
-          <h1 className="font-mono text-3xl md:text-5xl font-bold text-foreground tracking-tight">
+          <h1 className="text-7xl font-sans font-bold text-foreground tracking-tight">
             Start a Project
           </h1>
-          <p className="text-sm md:text-base text-muted-foreground font-sans max-w-2xl">
-            Have a product or CAD file ready for rendering or WebGL configurator integration? Submit your technical inquiry below.
+          <p className="text-xl font-mono text-muted-foreground max-w-xl">
+            Send your CAD files and brief. We'll take it from there.
           </p>
         </div>
 
@@ -27,15 +27,15 @@ export default function ContactPage() {
 
           <div className="lg:col-span-5 space-y-6">
             <div className="border border-border bg-card p-6 space-y-6">
-              <h2 className="font-mono text-sm font-bold text-foreground uppercase border-b border-border pb-3">
+              <h2 className="text-sm font-mono font-bold text-foreground uppercase border-b border-border pb-3">
                 DIRECT CONTACT CHANNELS
               </h2>
 
-              <div className="space-y-4 font-mono text-xs text-muted-foreground">
+              <div className="space-y-4 text-sm font-mono text-muted-foreground">
                 <div className="flex items-start space-x-3">
                   <Mail className="w-4 h-4 text-accent shrink-0 mt-0.5" />
                   <div>
-                    <span className="text-[10px] uppercase text-muted-foreground block">EMAIL</span>
+                    <span className="text-xs uppercase text-muted-foreground block">EMAIL</span>
                     <a
                       href={`mailto:${SITE_METADATA.email}`}
                       className="text-foreground hover:text-accent font-medium transition-colors"
@@ -48,7 +48,7 @@ export default function ContactPage() {
                 <div className="flex items-start space-x-3">
                   <Clock className="w-4 h-4 text-accent shrink-0 mt-0.5" />
                   <div>
-                    <span className="text-[10px] uppercase text-muted-foreground block">RESPONSE TIME</span>
+                    <span className="text-xs uppercase text-muted-foreground block">RESPONSE TIME</span>
                     <span className="text-foreground font-medium">Within 24 Hours (Mon–Fri)</span>
                   </div>
                 </div>
@@ -56,17 +56,17 @@ export default function ContactPage() {
                 <div className="flex items-start space-x-3">
                   <MapPin className="w-4 h-4 text-accent shrink-0 mt-0.5" />
                   <div>
-                    <span className="text-[10px] uppercase text-muted-foreground block">LOCATION / TIMEZONE</span>
+                    <span className="text-xs uppercase text-muted-foreground block">LOCATION / TIMEZONE</span>
                     <span className="text-foreground font-medium">{SITE_METADATA.location}</span>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div className="border border-border bg-background p-6 font-mono text-xs space-y-2">
-              <h3 className="font-bold text-foreground">NEED AN NDA FIRST?</h3>
-              <p className="text-muted-foreground font-sans text-xs leading-relaxed">
-                If your CAD files contain unreleased intellectual property, send over your mutual NDA to <a href={`mailto:${SITE_METADATA.email}`} className="text-accent underline">{SITE_METADATA.email}</a> prior to uploading assets.
+            <div className="border border-border bg-background p-6 text-sm font-mono space-y-2">
+              <h3 className="font-bold text-foreground">NDA REQUIRED?</h3>
+              <p className="text-muted-foreground text-sm font-mono leading-relaxed">
+                Send your NDA to <a href={`mailto:${SITE_METADATA.email}`} className="text-accent underline">{SITE_METADATA.email}</a> before sharing IP-sensitive files.
               </p>
             </div>
           </div>

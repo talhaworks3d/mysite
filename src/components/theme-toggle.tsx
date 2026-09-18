@@ -14,7 +14,7 @@ export function ThemeToggle() {
 
   if (!mounted) {
     return (
-      <div className="w-8 h-8 border border-border flex items-center justify-center text-xs font-mono text-muted select-none">
+      <div className="w-8 h-8 border border-border flex items-center justify-center text-sm font-mono text-muted select-none">
         --
       </div>
     );

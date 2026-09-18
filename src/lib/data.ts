@@ -47,11 +47,11 @@ export interface Capabilities {
 }
 
 export const SITE_METADATA = {
-  title: "TALHA — 3D Hardware Visualization & Web Configurators",
-  author: "Talha",
-  positioning: "High-precision 3D visualization, CAD optimization, and real-to-sim digital twin assets for hardware & robotics leaders.",
-  bio: "Specialized in converting raw industrial CAD into web-ready 3D catalog assets, simulation-ready digital twins for AI & robotics platforms (Isaac Sim / MuJoCo), and photorealistic product marketing renders.",
-  location: "UTC+6 · Available for global remote contracts",
+  title: "STUDIO XYZ — 3D Hardware Visualization",
+  author: "Studio XYZ",
+  positioning: "Precision 3D for hardware, robotics, and product launches.",
+  bio: "Converting industrial CAD into web-ready 3D assets, simulation-ready digital twins, and photorealistic product renders.",
+  location: "UTC+6 · Remote",
   email: "contact@talha.design",
   socials: {
     github: "https://github.com",
@@ -97,7 +97,7 @@ export const PROJECTS: Project[] = [
       projectTitle: "13 Cinema Robots Rigged & Textured",
       rating: 5.0,
       dateRange: "April 2026 - August 2026",
-      comment: "Client review pending publication on profile...",
+      comment: "Honest, quick, and attentive throughout. Easy to communicate with, kept everything moving, and delivered exactly what we needed. Will definitely continue working together.",
       endorsement: "Endorsed by client",
       attributes: [
         "Committed to Quality",

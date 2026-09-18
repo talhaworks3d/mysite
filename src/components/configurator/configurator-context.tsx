@@ -43,14 +43,14 @@ export const PAINT_OPTIONS: PaintOption[] = [
   { id: "black", name: "Black", hex: "#0a0a0a", finish: "solid", tier: "Standard", price: 0 },
   { id: "white", name: "White", hex: "#f2f2f0", finish: "solid", tier: "Standard", price: 0 },
   { id: "guards-red", name: "Guards Red", hex: "#a30014", finish: "solid", tier: "Standard", price: 0 },
-  { id: "racing-yellow", name: "Racing Yellow", hex: "#f5d300", finish: "special", tier: "Special", price: 3200 },
-  { id: "gt-silver", name: "GT Silver Metallic", hex: "#9a9a96", finish: "metallic", tier: "Metallic", price: 1800 },
-  { id: "rhodium-silver", name: "Rhodium Silver Metallic", hex: "#8f9295", finish: "metallic", tier: "Metallic", price: 1800 },
-  { id: "liquid-metal", name: "Liquid Metal Silver", hex: "#b8b8b8", finish: "metallic", tier: "Metallic", price: 11900 },
-  { id: "sapphire-blue", name: "Sapphire Blue Metallic", hex: "#1a3a6e", finish: "metallic", tier: "Metallic", price: 1800 },
-  { id: "dark-blue", name: "Dark Blue Metallic", hex: "#12233f", finish: "metallic", tier: "Metallic", price: 1800 },
-  { id: "meteor-grey", name: "Meteor Grey Metallic", hex: "#5c5f61", finish: "metallic", tier: "Metallic", price: 1800 },
-  { id: "basalt-black", name: "Basalt Black Metallic", hex: "#1c1c1e", finish: "metallic", tier: "Metallic", price: 1800 },
+  { id: "racing-yellow", name: "Racing Yellow", hex: "#ffd000", finish: "solid", tier: "Special", price: 3200 },
+  { id: "gt-silver", name: "GT Silver Metallic", hex: "#8a8d8f", finish: "metallic", tier: "Metallic", price: 1800 },
+  { id: "rhodium-silver", name: "Rhodium Silver Metallic", hex: "#94999f", finish: "metallic", tier: "Metallic", price: 1800 },
+  { id: "liquid-metal", name: "Liquid Metal Silver", hex: "#d9dadd", finish: "metallic", tier: "Metallic", price: 11900 },
+  { id: "sapphire-blue", name: "Sapphire Blue Metallic", hex: "#1f385c", finish: "metallic", tier: "Metallic", price: 1800 },
+  { id: "dark-blue", name: "Dark Blue Metallic", hex: "#111625", finish: "metallic", tier: "Metallic", price: 1800 },
+  { id: "meteor-grey", name: "Meteor Grey Metallic", hex: "#4a4d4f", finish: "metallic", tier: "Metallic", price: 1800 },
+  { id: "basalt-black", name: "Basalt Black Metallic", hex: "#151515", finish: "metallic", tier: "Metallic", price: 1800 },
 ];
 
 export const WHEEL_OPTIONS: WheelOption[] = [

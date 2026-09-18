@@ -48,7 +48,7 @@ export function RenderGallery({ images, projectTitle }: RenderGalleryProps) {
             />
             {/* Hover overlay hint */}
             <div className="absolute inset-0 bg-background/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-              <div className="bg-background/90 border border-border px-3 py-1.5 font-mono text-xs text-foreground flex items-center space-x-2">
+              <div className="bg-background/90 border border-border px-3 py-1.5 text-sm font-mono text-foreground flex items-center space-x-2">
                 <Maximize2 className="w-3.5 h-3.5 text-accent" />
                 <span>Expand</span>
               </div>
@@ -65,7 +65,7 @@ export function RenderGallery({ images, projectTitle }: RenderGalleryProps) {
         >
           {/* Controls Bar */}
           <div
-            className="absolute top-4 left-4 right-4 flex items-center justify-between font-mono text-xs text-white/80 z-10"
+            className="absolute top-4 left-4 right-4 flex items-center justify-between text-sm font-mono text-white/80 z-10"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="bg-black/60 border border-white/10 px-3 py-1.5">
@@ -127,7 +127,7 @@ export function RenderGallery({ images, projectTitle }: RenderGalleryProps) {
           )}
 
           {/* Hint */}
-          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 font-mono text-[11px] text-white/50 hidden sm:block">
+          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-xs text-white/50 hidden sm:block">
             Use Left / Right arrow keys to navigate · ESC or Click outside to close
           </div>
         </div>

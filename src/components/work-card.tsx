@@ -34,20 +34,20 @@ export function WorkCard({ project, priority = false }: WorkCardProps) {
       </div>
       <div className="p-5 flex flex-col justify-between">
         <div>
-          <div className="flex items-center justify-between text-xs font-mono text-muted-foreground mb-2">
+          <div className="flex items-center justify-between text-sm font-mono text-muted-foreground mb-2">
             <span>{project.client}</span>
             <span>{project.year}</span>
           </div>
-          <h3 className="font-mono text-base font-semibold text-foreground tracking-tight group-hover:text-accent transition-colors">
+          <h3 className="text-xl font-sans font-semibold text-foreground tracking-tight group-hover:text-accent transition-colors">
             {project.title}
           </h3>
-          <p className="mt-2 text-xs text-muted-foreground line-clamp-2 leading-relaxed font-sans">
+          <p className="mt-2 text-sm font-mono text-muted-foreground line-clamp-2 leading-relaxed ">
             {project.summary}
           </p>
         </div>
         <div className="mt-4 pt-3 border-t border-border/50 flex flex-wrap gap-1.5">
           {project.tools.slice(0, 3).map((tool) => (
-            <Tag key={tool} variant="outline" className="text-[10px]">
+            <Tag key={tool} variant="outline" className="text-xs">
               {tool}
             </Tag>
           ))}

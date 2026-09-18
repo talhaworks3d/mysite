@@ -45,15 +45,15 @@ export function ConfiguratorSummary() {
         {/* Left Specification Summary */}
         <div className="space-y-2">
           <div className="flex items-center space-x-2">
-            <span className="px-2 py-0.5 bg-accent/10 border border-accent/30 text-accent font-mono text-[10px] uppercase font-bold tracking-widest">
+            <span className="px-2 py-0.5 bg-accent/10 border border-accent/30 text-accent text-xs uppercase font-bold tracking-widest">
               HYBRID SUPERCAR SPECIFICATION
             </span>
-            <span className="text-xs font-mono text-muted-foreground hidden sm:inline">
+            <span className="text-sm font-mono text-muted-foreground hidden sm:inline">
               918 SPYDER WEISSACH / BASE
             </span>
           </div>
 
-          <div className="flex flex-wrap items-center gap-x-4 gap-y-1 font-mono text-xs text-foreground">
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm font-mono text-foreground">
             <div>
               <span className="text-muted-foreground">PAINT: </span>
               <span className="font-bold text-accent">{state.paint.name}</span>
@@ -72,10 +72,10 @@ export function ConfiguratorSummary() {
         {/* Right Price & Actions */}
         <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full md:w-auto">
           <div className="text-left sm:text-right space-y-0.5">
-            <span className="text-[10px] font-mono text-muted-foreground uppercase block">
+            <span className="text-xs text-muted-foreground uppercase block">
               ESTIMATED BUILD MSRP
             </span>
-            <span className="text-xl md:text-2xl font-mono font-bold text-foreground block">
+            <span className="text-xl font-sans font-bold text-foreground block">
               ${totalPrice.toLocaleString()}
             </span>
           </div>
@@ -92,7 +92,7 @@ export function ConfiguratorSummary() {
                 <Share2 className="w-4 h-4" />
               )}
               {copied && (
-                <span className="absolute -top-8 left-1/2 -translate-x-1/2 bg-foreground text-background font-mono text-[10px] px-2 py-0.5 whitespace-nowrap shadow-md">
+                <span className="absolute -top-8 left-1/2 -translate-x-1/2 bg-foreground text-background text-xs px-2 py-0.5 whitespace-nowrap shadow-md">
                   LINK COPIED!
                 </span>
               )}
@@ -110,7 +110,7 @@ export function ConfiguratorSummary() {
               onClick={() => setShowInquiryModal(true)}
               variant="primary"
               size="md"
-              className="font-mono text-xs uppercase"
+              className="text-sm font-mono uppercase"
             >
               <FileText className="w-4 h-4 mr-2" />
               Save Build / Inquiry
@@ -125,11 +125,11 @@ export function ConfiguratorSummary() {
           <div className="relative w-full max-w-lg bg-card border border-border p-6 shadow-2xl space-y-6">
             <div className="flex items-start justify-between border-b border-border pb-4">
               <div className="space-y-1">
-                <div className="inline-flex items-center space-x-2 px-2.5 py-0.5 bg-accent/10 border border-accent/30 text-accent font-mono text-[10px] uppercase font-bold">
+                <div className="inline-flex items-center space-x-2 px-2.5 py-0.5 bg-accent/10 border border-accent/30 text-accent text-xs uppercase font-bold">
                   <ShieldCheck className="w-3 h-3" />
                   <span>CUSTOM BUILD QUOTE</span>
                 </div>
-                <h3 className="font-mono text-lg font-bold text-foreground">
+                <h3 className="text-xl font-sans font-bold text-foreground">
                   Porsche 918 Spyder Specification
                 </h3>
               </div>
@@ -142,7 +142,7 @@ export function ConfiguratorSummary() {
             </div>
 
             {/* Spec breakdown table */}
-            <div className="space-y-2 font-mono text-xs border border-border p-3 bg-background/50">
+            <div className="space-y-2 text-sm font-mono border border-border p-3 bg-background/50">
               <div className="flex justify-between py-1 border-b border-border/50">
                 <span className="text-muted-foreground">Base Model:</span>
                 <span className="text-foreground">918 Spyder Hybrid ($845,000)</span>
@@ -165,7 +165,7 @@ export function ConfiguratorSummary() {
                   {state.trim.name} ({state.trim.price === 0 ? "Included" : `+$${state.trim.price.toLocaleString()}`})
                 </span>
               </div>
-              <div className="flex justify-between py-2 pt-3 font-bold text-sm text-accent">
+              <div className="flex justify-between py-2 pt-3 font-bold text-sm font-mono text-accent">
                 <span>Total Estimated Build MSRP:</span>
                 <span>${totalPrice.toLocaleString()}</span>
               </div>
@@ -173,41 +173,41 @@ export function ConfiguratorSummary() {
 
             {/* Contact form */}
             {formSubmitted ? (
-              <div className="p-4 bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 font-mono text-xs text-center space-y-1">
+              <div className="p-4 bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-sm font-mono text-center space-y-1">
                 <Check className="w-6 h-6 mx-auto text-emerald-400 animate-bounce" />
                 <p className="font-bold">Specification inquiry submitted!</p>
-                <p className="text-[11px] text-muted-foreground font-sans">
+                <p className="text-xs text-muted-foreground ">
                   We have saved your 3D PlayCanvas configuration.
                 </p>
               </div>
             ) : (
               <form onSubmit={handleSubmitInquiry} className="space-y-4">
                 <div className="space-y-1">
-                  <label className="block font-mono text-xs text-muted-foreground uppercase">
+                  <label className="block text-sm font-mono text-muted-foreground uppercase">
                     Your Full Name
                   </label>
                   <input
                     type="text"
                     required
                     placeholder="e.g. Alex Thorne"
-                    className="w-full px-3 py-2 bg-background border border-border focus:border-accent text-foreground font-sans text-sm outline-none transition-colors"
+                    className="w-full px-3 py-2 bg-background border border-border focus:border-accent text-foreground text-sm font-mono outline-none transition-colors"
                   />
                 </div>
 
                 <div className="space-y-1">
-                  <label className="block font-mono text-xs text-muted-foreground uppercase">
+                  <label className="block text-sm font-mono text-muted-foreground uppercase">
                     Work / Email Address
                   </label>
                   <input
                     type="email"
                     required
                     placeholder="alex@hardware.com"
-                    className="w-full px-3 py-2 bg-background border border-border focus:border-accent text-foreground font-sans text-sm outline-none transition-colors"
+                    className="w-full px-3 py-2 bg-background border border-border focus:border-accent text-foreground text-sm font-mono outline-none transition-colors"
                   />
                 </div>
 
                 <div className="pt-2">
-                  <Button type="submit" variant="primary" size="md" className="w-full font-mono text-xs uppercase">
+                  <Button type="submit" variant="primary" size="md" className="w-full text-sm font-mono uppercase">
                     <Send className="w-4 h-4 mr-2" />
                     Send Custom 3D Config Specification
                   </Button>

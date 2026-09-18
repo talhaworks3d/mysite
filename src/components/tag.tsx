@@ -14,7 +14,7 @@ export function Tag({
   return (
     <span
       className={cn(
-        "inline-flex items-center px-2 py-0.5 text-[11px] font-mono tracking-wider uppercase border transition-colors",
+        "inline-flex items-center px-2 py-0.5 text-xs tracking-wider uppercase border transition-colors",
         variant === "default" &&
           "border-border bg-card text-muted-foreground",
         variant === "outline" &&
